@@ -18,16 +18,17 @@ import io.github.GerdanyJr.Authentication.model.exception.NotFoundException;
 import io.github.GerdanyJr.Authentication.model.request.RefreshTokenRequest;
 import io.github.GerdanyJr.Authentication.model.response.AuthResponse;
 import io.github.GerdanyJr.Authentication.repository.UserRepository;
+import io.github.GerdanyJr.Authentication.service.AuthService;
 
 @Service
-public class AuthService {
+public class AuthServiceImpl implements AuthService {
 
         private final AuthenticationManager authenticationManager;
         private final TokenService tokenService;
         private final UserRepository userRepository;
         private final BCryptPasswordEncoder encoder;
 
-        public AuthService(AuthenticationManager authenticationManager, TokenService tokenService,
+        public AuthServiceImpl(AuthenticationManager authenticationManager, TokenService tokenService,
                         UserRepository userRepository, BCryptPasswordEncoder encoder) {
                 this.authenticationManager = authenticationManager;
                 this.tokenService = tokenService;

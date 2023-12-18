@@ -10,7 +10,7 @@ import io.github.GerdanyJr.Authentication.model.dto.Login;
 import io.github.GerdanyJr.Authentication.model.entity.User;
 import io.github.GerdanyJr.Authentication.model.request.RefreshTokenRequest;
 import io.github.GerdanyJr.Authentication.model.response.AuthResponse;
-import io.github.GerdanyJr.Authentication.service.impl.AuthService;
+import io.github.GerdanyJr.Authentication.service.AuthService;
 
 @RestController
 @RequestMapping("/auth")
